@@ -37,7 +37,7 @@
                     </div>
                 </div>
             </div>
-            <button onclick="">The Family Blood Line</button>
+            <button onclick="TheFamilyBlood()">The Family Blood Line</button>
         </section>
 
         <section id="bb4" class="bigbox">
@@ -73,7 +73,8 @@ function Nightmode(){
     let section1 = doc.queryselector('#bb1');
     let subtitle = doc.queryselector('#bb1>h3');
     let para = doc.queryselector('#bb1>div>p');
-    section1.style.backgroundColor = "000000";
+    section1.style.backgroundColor = '000000';
+    subtitle.style.color = "#ffffff";
     para.style.color = "#ffffff";
 }
         //function 2
@@ -81,6 +82,14 @@ function Nightmode(){
         //function 3
 function TheFamilyBlood(){
     const doc = document;
+    let section1 = doc.queryselector('#bb3');
+    let contentgp = doc.queryselector('.contentgp');
+    let gpa = doc.queryselector('#bb3>.contentgp>.p');
+    let dad = doc.queryselector('.c');
+    let bro = doc.queryselector('.c');
+    gpa.style.backgroundColor = red;
+    dad.style.backgroundColor = red;
+    bro.style.backgroundColor = red;
 }
         //function 4
 
