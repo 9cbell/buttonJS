@@ -52,7 +52,7 @@
                     <li class="fish">blue fish</li>
                 </ul>
             </div>
-            <button onclick="">Technicolor Fish</button>
+            <button onclick="seuss()">Technicolor Fish</button>
         </section>
 
         <section id="bb5" class="bigbox">
@@ -67,32 +67,35 @@
     </body>
     <script type="text/javascript">
         //type your code for each button below the series of comments.  All javascript must be inside the script-tags
-        //function 1
+        //function 1/2
 function Nightmode(){
     const doc = document;
     let section1 = doc.querySelector('#bb1');
-    let subtitle = doc.querySelector('#bb1>h3');
-    let para = doc.querySelector('#bb1>div>p');
+    section1.classList.toggle('nightmode');
     section1.style.backgroundColor = '#000000';
     subtitle.style.color = "#ffffff";
     para.style.color = "#ffffff";
 }
-        //function 2
 
         //function 3
 function TheFamilyBlood(){
     const doc = document;
     let section1 = doc.querySelector('#bb3');
-    let contentgp = doc.querySelector('.contentgp');
+    let contentgp = doc.querySelector('.gp');
     let gpa = doc.querySelector('#bb3>.contentgp>.p');
     let dad = doc.querySelector('.c');
     let bro = doc.querySelector('.c');
-    gpa.style.backgroundColor = red;
-    dad.style.backgroundColor = red;
-    bro.style.backgroundColor = red;
+    gpa.style.backgroundColor = 'red';
+    dad.style.backgroundColor = 'red';
+    bro.style.backgroundColor = 'red';
 }
         //function 4
-
+function seuss(){
+  const doc = document;
+  let fish = doc.querySelector('fish');
+  fish[2].style.color = "red";
+  fish[3].style.color = "blue";
+}
         //function 5 & 6
     </script>
 </html>
