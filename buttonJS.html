@@ -20,7 +20,7 @@
             <div class="content">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
-            <button onclick="">Toggle Day/Night Mode</button>
+            <button onclick="ToggleDayNight()">Toggle Day/Night Mode</button>
         </section>
 
         <section id="bb3" class="bigbox">
@@ -37,12 +37,12 @@
                     </div>
                 </div>
             </div>
-            <button onclick="TheFamilyBlood()">The Family Blood Line</button>
+            <button onclick="Bloodline()">The Family Blood Line</button>
         </section>
 
         <section id="bb4" class="bigbox">
             <h3 class="subtitle">Challenge 4</h3>
-            <div class="content">
+            <div class="content poo">
                 <ul>
                     <li>thing 1</li>
                     <li>thing 2</li>
@@ -52,7 +52,7 @@
                     <li class="fish">blue fish</li>
                 </ul>
             </div>
-            <button onclick="seuss()">Technicolor Fish</button>
+            <button onclick="fish()">Technicolor Fish</button>
         </section>
 
         <section id="bb5" class="bigbox">
@@ -61,41 +61,65 @@
                 <span>20</span>
             </div>
             <br>
-            <button onclick="">+1</button>
-            <button onclick="">+10</button>
+            <button onclick="math()">+1</button>
+            <button onclick="math2()">+10</button>
         </section>
     </body>
     <script type="text/javascript">
         //type your code for each button below the series of comments.  All javascript must be inside the script-tags
-        //function 1/2
-function Nightmode(){
-    const doc = document;
-    let section1 = doc.querySelector('#bb1');
-    section1.classList.toggle('nightmode');
-    section1.style.backgroundColor = '#000000';
-    subtitle.style.color = "#ffffff";
-    para.style.color = "#ffffff";
-}
+        //function 1
+        function Nightmode(){
+          const doc = document;
+          let section1 = doc.querySelector('#bb1');
+          let subtitle = doc.querySelector('#bb1 > h3');
+          let words = doc.querySelector('#bb1 > div > p');
+          section1.style.backgroundColor = "black";
+          subtitle.style.color = 'white';
+          words.style.color = 'white';
+        }
+        //function 2
+        function ToggleDayNight(){
+            const doc = document;
+            let section1 = doc.querySelector('#bb2');
+            section1.classList.toggle("Nightmode");
+        }
 
         //function 3
-function TheFamilyBlood(){
-    const doc = document;
-    let section1 = doc.querySelector('#bb3');
-    let contentgp = doc.querySelector('.gp');
-    let gpa = doc.querySelector('#bb3>.contentgp>.p');
-    let dad = doc.querySelector('.c');
-    let bro = doc.querySelector('.c');
-    gpa.style.backgroundColor = 'red';
-    dad.style.backgroundColor = 'red';
-    bro.style.backgroundColor = 'red';
-}
+        function Bloodline(){
+          const doc = document;
+          let gpa= doc.querySelector('#bb3>.gp');
+          let pops = doc.querySelector('#bb3>.gp>.p');
+          let sibling= doc.querySelectorAll('#bb3>.gp>.p>.c');
+          gpa.style.backgroundColor ='#550000' ;
+          pops.style.backgroundColor = '#991100' ;
+          sibling[0].style.backgroundColor = '#dd1111';
+          sibling[1].style.backgroundColor = '#dd1111';
+        }
         //function 4
-function seuss(){
-  const doc = document;
-  let fish = doc.querySelector('fish');
-  fish[2].style.color = "red";
-  fish[3].style.color = "blue";
-}
-        //function 5 & 6
+        function fish(){
+          const doc = document;
+          let fish = doc.querySelectorAll('.fish');
+          fish[2].style.color = "red";
+          fish[3].style.color = "blue";
+        }
+        //function 5
+        function math(){
+            const doc = document;
+            let updatedNumber = Number(doc.querySelector('span').innerHTML);
+            updatedNumber++;
+            doc.querySelector('span').innerHTML = updatedNumber;
+        }
+        function math2(){
+            const doc = document;
+            let updatedNumber = Number(doc.querySelector('span').innerHTML);
+            updatedNumber = updatedNumber + 10;
+            doc.querySelector('span').innerHTML = updatedNumber;
+        }
+        //function 6
+        function tiger(){
+            const doc = document;
+            let section = doc.querySelectorAll(".bigbox");
+            section.style.backgroundImage.
+        }
     </script>
 </html>
