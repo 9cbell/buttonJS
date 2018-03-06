@@ -32,12 +32,13 @@ button{
     float: left;
 }
 
-.nightMode{
+.Nightmode{
     background-color: black;
     color: white;
+    
 }
 
-.dayMode{
+.daymode{
     background-color: white;
     color: black;
 }
